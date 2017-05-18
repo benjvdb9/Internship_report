@@ -1,0 +1,38 @@
++uV8Mk3Vkm5of+YyzrFSgs/0EOR+vpCb11sJ5rUO
+
+Ubuntu_DC: Administrator, &ZD6X3Y8mB5 (ec2-35-156-241-166.eu-central-1.compute.amazonaws.com)
+
+new environment:
+python -i suite.py "3.12.0.106" "UbuntuS-16.04-x64_PGSQL_SSM" LinuxBuildIntakeSuite --projectName="Identikey Server" --testplanName="IAS 3.12.0 - Automated Build Intake" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="/var/ias-dev_3.12.0.106.iso" --deployed_name="" --debug 2>&1
+
+reuse environment:
+python -i suite.py "3.12.0.106" "UbuntuS-16.04-x64_PGSQL_SSM" LinuxBuildIntakeSuite --projectName="Identikey Server" --testplanName="IAS 3.12.0 - Automated Build Intake" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="" --deployed_name="3.12.0.106_UbuntuS-16.04-x64_PGSQL_SSM" --debug 2>&1
+
+.r*Hsh8zQLH
+
+IBM links
+
+http://www-01.ibm.com/support/docview.wss?uid=swg24027375
+
+https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/Login
+
+http://www-01.ibm.com/support/docview.wss?uid=swg21622147
+
+for v115:
+
+python -i suite.py "3.12.0.115" "UbuntuS-16.04-x64_PGSQL_SSM" LinuxBuildIntakeSuite --projectName="Identikey Server" --testplanName="IAS 3.12.0 - Automated Build Intake" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="/var/ias-dev_3.12.0.115.iso" --deployed_name="" --debug 2>&1
+
+python -i suite.py "3.12.0.115" "UbuntuS-16.04-x64_PGSQL_SSM" LinuxBuildIntakeSuite --projectName="Identikey Server" --testplanName="IAS 3.12.0 - Automated Build Intake" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="/var/ias-dev_3.12.0.115.iso" --deployed_name="3.12.0.115_UbuntuS-16.04-x64_PGSQL_SSM" --debug 2>&1
+
+python -i suite.py "3.12.0.115" "UbuntuS-16.04-x64_PGSQL_SSM" LinuxBuildIntakeSuite --projectName="Identikey Server" --testplanName="busscbe1 testplan" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="/var/ias-dev_3.12.0.115.iso" --deployed_name="3.12.0.115_UbuntuS-16.04-x64_PGSQL_SSM" 2>&1
+
+S3 import:
+
+aws ec2 import-image --cli-input-json "{ \"Description\": \"imported_Identikey\", \"DiskContainers\": [{\"Description\":  \"imported_Identikey\", \"UserBucket\": {\"S3Bucket\": \"ubuntu16.04.frankfurt\", \"S3Key\": \"SDTF_UbuntuS-16.04.1-x64_PGSQL_SSM-disk1.vmdk\"}}]
+
+
+
+
+
+New Windows Instance:
+python -i suite.py "3.12.0.115" "W2K12-R2-x64-ess_AD_SSM" WindowsBuildIntakeSuite --projectName="Identikey Server" --testplanName="busscbe1 windows testplan" --virt.user="lm-auto-wemmel" --virt.password="U89yMN8R8bwgOKR1k6tz" --traces.user="lm-user" --traces.password="Shared1234" --install.media="/c/Users/Administrator/Desktop/ias-dev_3.12.0.115.iso" --deployed_name="" --debug 2>&1
